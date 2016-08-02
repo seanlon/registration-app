@@ -8,14 +8,15 @@
 
 import React, { PropTypes } from 'react';
 
-import styles from './styles.css';
+import styles from './styles.css'; 
 
 function Button(props) {
-  const className = props.className ? props.className : styles.button;
+  let className = props.className ? props.className : styles.button  ;
+    className = props.isAlternate ? styles.buttonAlt: className   ; 
 
   // Render an anchor tag
   let button = (
-    <a className={className} href={props.href} onClick={props.onClick}>{props.children}</a>
+    <a className={className  } href={props.href} onClick={props.onClick}>{props.children}</a>
   );
 
   // If the Button has a handleRoute prop, we want to render a button

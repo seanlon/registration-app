@@ -10,10 +10,16 @@
         "message": ""
     },
     {
-        "id": "app.components.HomePage.header",
+        "id": "app.components.HomePage.header.instruction",
         "defaultMessage": "Willkommen in unserem Büro. Bevor Sie eingeben, benutzen Sie bitte dieses Self Service Registrierung Kiosk! ",
         "message": "Willkommen in unserem Büro. Bevor Sie eingeben, benutzen Sie bitte dieses Self Service Registrierung Kiosk! "
     },
+
+    {
+        "id": "app.components.HomePage.visitor.instruction",
+        "defaultMessage": " Wenn dies Sie die Prämisse eingeben, dann melden Sie sich. Wenn Sie verlassen melden Sie sich ab.  ",
+        "message": "Wenn dies Sie die Prämisse eingeben, dann melden Sie sich. Wenn Sie verlassen melden Sie sich ab.  "
+    }, 
     {
         "id": "app.components.Header.message",
         "defaultMessage": "Registrierung Kiosk",

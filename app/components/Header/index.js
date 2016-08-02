@@ -15,8 +15,7 @@ function Header() {
               <span >  <FormattedMessage {...messages.titleMessage}  /> </span>  <br/> 
               <span  className={styles.headerSubText}>  <FormattedMessage {...messages.subtitleMessage}  /> </span>  
           </a>    
-
-            
+ 
       </section> 
       <section> 
           <div className={styles.headerLocale} >  

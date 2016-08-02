@@ -11,20 +11,22 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import messages from './messages'; 
 import Button from 'components/Button';
 
-export default class Visitor extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export default class ManagerDashboard extends React.Component { // eslint-disable-line react/prefer-stateless-function
+
+ 
 
   render() {
     return (
    
       <p>
-        <Button {...messages.header} href={'/visitor/login'} >
-             <FormattedMessage {...messages.login} />
+        <Button {...messages.header} href={'/manager/dashboard'} >
+             <FormattedMessage {...messages.dashboard} />
         </Button>
-        <Button {...messages.header} href={'/visitor/logout'} > 
-             <FormattedMessage {...messages.logout} />
+        <Button {...messages.header} href={'/manager/log'} > 
+             <FormattedMessage {...messages.log} />
         </Button>
 
          <FormattedMessage {...messages.header} />

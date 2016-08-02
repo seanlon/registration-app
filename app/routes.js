@@ -35,11 +35,80 @@ export default function createRoutes() {
       },
     },
     {
+      path: '/visitor/login',
+      name: 'visitorlogin',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/VisitorLogin'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+   
+    {
+      path: '/visitor/logout',
+      name: 'visitorlogout',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/VisitorLogout'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
       path: '/manager',
       name: 'manager',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
           System.import('containers/Manager'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/manager/dashboard',
+      name: 'managerdashboard',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/ManagerDashboard'),
+        ]);
+
+        const renderRoute = loadModule(cb);  
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/manager/log',
+      name: 'managerlog',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/ManagerLog'),
         ]);
 
         const renderRoute = loadModule(cb);

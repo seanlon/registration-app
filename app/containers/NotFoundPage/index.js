@@ -17,9 +17,9 @@ export default class NotFound extends React.Component { // eslint-disable-line r
 
   render() {
     return (
-      <h1>
+      <p>
         <FormattedMessage {...messages.header} />
-      </h1>
+      </p>
     );
   }
 }

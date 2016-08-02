@@ -14,7 +14,7 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import Button from 'components/Button';
 
-export default class Visitor extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export default class VisitorLogin extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
     return (

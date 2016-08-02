@@ -11,15 +11,28 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import messages from './messages'; 
+import Button from 'components/Button';
 
 export default class Manager extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
+ 
+
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+   
+      <p>
+        <Button {...messages.header} isAlternate={false}  href={'/manager/dashboard'} >
+             <FormattedMessage {...messages.dashboard} />
+        </Button>
+        <Button {...messages.header} isAlternate={true}  href={'/manager/log'} > 
+             <FormattedMessage {...messages.log} />
+        </Button>
+
+         <FormattedMessage {...messages.header} />
+      </p>
     );
   }
 }
+
+ 

@@ -16,14 +16,16 @@ import Button from 'components/Button';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
+
+
   render() {
     return (   
   
       <p>
         <Button {...messages.header} href={'/visitor'} >
              <FormattedMessage {...messages.visitor} />
-        </Button>
-        <Button {...messages.header} href={'/manager'} > 
+        </Button>   
+        <Button {...messages.header} isAlternate={true} href={'/manager'} > 
              <FormattedMessage {...messages.manager} />
         </Button>
 

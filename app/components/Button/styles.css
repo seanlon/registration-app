@@ -30,7 +30,13 @@
   color:#fff;
   border: 2px solid #fff;
 }
+.buttonAlt {
 
+  composes: button ;
+  color:  #27ae60;
+  background-color:#fff;
+  border: 2px solid #fff;
+}
 .button:active {
   background: #41ADDD;
   color: #FFF;
