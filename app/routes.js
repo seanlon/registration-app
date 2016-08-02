@@ -137,11 +137,19 @@ export default function createRoutes() {
       },
     }, {
       path: '*',
-      name: 'notfound',
+      name: 'notfound', 
       getComponent(nextState, cb) {
-        System.import('containers/NotFoundPage')
-          .then(loadModule(cb))
-          .catch(errorLoading);
+        const importModules = Promise.all([
+          System.import('containers/HomePage'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
       },
     },
   ];
