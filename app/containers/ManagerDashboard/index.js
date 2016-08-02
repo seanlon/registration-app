@@ -21,7 +21,7 @@ export default class ManagerLog extends React.Component { // eslint-disable-line
   render() {
     return (
    
-      <p>
+      <div>
         <Button {...messages.header} isAlternate={true}   href={'/manager/dashboard'} >
              <FormattedMessage {...messages.dashboard} />
         </Button>
@@ -30,7 +30,7 @@ export default class ManagerLog extends React.Component { // eslint-disable-line
         </Button>
 
          <FormattedMessage {...messages.header} />
-      </p>
+      </div>
     );
   }
 }

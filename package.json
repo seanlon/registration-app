@@ -36,8 +36,8 @@
     "generate": "plop --plopfile internals/generators/index.js",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
-    "lint:js": "npm run lint:eslint -- . ",
-    "lint:css": "stylelint ./app/**/*.css",
+    "lint:js": "npm run lint:eslint -- . ", 
+    "lint:css": "stylelint ./app/**/*.css", "lint:css": " ",
     "lint:staged": "lint-staged",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
@@ -71,8 +71,7 @@
     }
   },
   "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": "airbnb",
+    "parser": "babel-eslint", 
     "env": {
       "browser": true,
       "node": true,
@@ -90,16 +89,7 @@
         "jsx": true
       }
     },
-    "rules": {
-      "import/no-unresolved": 2,
-      "comma-dangle": [2, "always-multiline"],
-      "indent": [2, 2, { "SwitchCase": 1 }],
-      "no-console": 1,
-      "max-len": 0,
-      "prefer-template": 2,
-      "no-use-before-define": 0,
-      "newline-per-chained-call": 0,
-      "arrow-body-style": [2, "as-needed"],
+    "rules": { 
       "jsx-a11y/href-no-hash": 2,
       "jsx-a11y/label-has-for": 2,
       "jsx-a11y/mouse-events-have-key-events": 2,

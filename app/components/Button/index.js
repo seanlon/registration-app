@@ -11,8 +11,9 @@ import React, { PropTypes } from 'react';
 import styles from './styles.css'; 
 
 function Button(props) {
-  let className = props.className ? props.className : styles.button  ;
-    className = props.isAlternate ? styles.buttonAlt: className   ; 
+  let className = props.className ? props.className : styles.button ;
+    className = props.isAlternate
+ ? styles.buttonAlt: className ; 
 
   // Render an anchor tag
   let button = (
@@ -35,6 +36,7 @@ function Button(props) {
 
 Button.propTypes = {
   className: PropTypes.string,
+  isAlternate: PropTypes.string,
   handleRoute: PropTypes.func,
   href: PropTypes.string,
   onClick: PropTypes.func,

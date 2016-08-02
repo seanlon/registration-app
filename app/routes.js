@@ -51,7 +51,6 @@ export default function createRoutes() {
         importModules.catch(errorLoading);
       },
     },
-   
     {
       path: '/visitor/logout',
       name: 'visitorlogout',
@@ -94,7 +93,7 @@ export default function createRoutes() {
           System.import('containers/ManagerDashboard'),
         ]);
 
-        const renderRoute = loadModule(cb);  
+        const renderRoute = loadModule(cb);
 
         importModules.then(([component]) => {
           renderRoute(component);

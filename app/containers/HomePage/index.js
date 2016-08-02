@@ -21,7 +21,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
   render() {
     return (   
   
-      <p>
+      <div>
         <Button {...messages.header} href={'/visitor'} >
              <FormattedMessage {...messages.visitor} />
         </Button>   
@@ -30,7 +30,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
         </Button>
 
          <FormattedMessage {...messages.header} />
-      </p>
+      </div>
  
     );
   }

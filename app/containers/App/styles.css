@@ -15,9 +15,19 @@
   color: #fff;
 }
 
+ .common-backgroundtree{ 
+    background-image: url('https://www.bforball.com/images/drawing-lessons/tree-46/step5.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding:50px;
+   
+ }
+
+
 .container {
   display: block;
-  composes: common-contentbox;
+  composes: common-backgroundtree;
+  composes: common-colorscheme;
   composes: common-colorscheme;
 }
 

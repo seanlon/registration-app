@@ -12,14 +12,14 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-import Button from 'components/Button';
-
-export default class VisitorLogout extends React.Component { // eslint-disable-line react/prefer-stateless-function
+import Button from 'components/Button'; 
+export default class VisitorLogout extends React.Component { 
+// eslint-disable-line react/prefer-stateless-function
 
   render() {
     return (
    
-      <p>
+      <div>
         <Button {...messages.header} href={'/visitor/login'} >
              <FormattedMessage {...messages.login} />
         </Button>
@@ -28,7 +28,7 @@ export default class VisitorLogout extends React.Component { // eslint-disable-l
         </Button>
 
          <FormattedMessage {...messages.header} />
-      </p>
+      </div>
     );
   }
 }

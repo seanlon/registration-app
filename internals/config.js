@@ -52,5 +52,5 @@ const ReactRegistrationApp = {
     },
   },
 };
- 
+
 module.exports = ReactRegistrationApp;

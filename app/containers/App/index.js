@@ -11,12 +11,13 @@
  * the linting exception.
  */
 
-import React from 'react';
-
+import React from 'react'; 
+import Helmet from 'react-helmet';
 import styles from './styles.css';
   
 // import Footer from 'components/Footer';
 import Header from 'components/Header';
+import LoadingIndicator from 'components/LoadingIndicator';
  
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -25,8 +26,24 @@ export default class App extends React.Component { // eslint-disable-line react/
   };
 
   render() {
-    return (
-      <div className={styles.container}>   
+    return ( 
+// <div style="
+//     background: url('https://www.bforball.com/images/drawing-lessons/tree-46/step5.png');
+//     background-repeat:no-repeat;
+//     position: fixed;
+//     top: 0;
+//     height: 100%;
+//     width: 100%;
+//     opacity:0.5;  ">ds</div>
+      <div className={styles.container}> 
+       <Helmet
+        titleTemplate="%s - Registration App ReactJs"
+        defaultTitle="Registration App ReactJs"
+        meta={[
+          { name: 'description', content: ' Registration App ReactJs' },
+        ]}
+      />
+        < LoadingIndicator  />
         <Header/> 
         {this.props.children}
       </div>

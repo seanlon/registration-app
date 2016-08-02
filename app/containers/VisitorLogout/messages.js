@@ -10,12 +10,11 @@ export default defineMessages({
     id: 'app.components.HomePage.visitor.instruction',
     defaultMessage: 'If you are entering the premise, please sign-in. If you are leaving please sign out.',
   },
-    login: {
+  login: {
     id: 'app.components.HomePage.login',
     defaultMessage: 'Check in',
   },
-  
-    logout: {
+  logout: {
     id: 'app.components.HomePage.logout',
     defaultMessage: 'Sign Out',
   },

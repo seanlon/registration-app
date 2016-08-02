@@ -10,7 +10,7 @@ import enLocaleData from 'react-intl/locale-data/en';
 import deLocaleData from 'react-intl/locale-data/de';
 
 export const appLocales = [
- 'en', 'de',
+  'en',  'de',
 ];
 
 import enTranslationMessages from './translations/en.json';

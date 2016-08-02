@@ -19,7 +19,7 @@ export default class VisitorLogin extends React.Component { // eslint-disable-li
   render() {
     return (
    
-      <p>
+      <div>
         <Button {...messages.header} href={'/visitor/login'} >
              <FormattedMessage {...messages.login} />
         </Button>
@@ -28,7 +28,7 @@ export default class VisitorLogin extends React.Component { // eslint-disable-li
         </Button>
 
          <FormattedMessage {...messages.header} />
-      </p>
+      </div>
     );
   }
 }

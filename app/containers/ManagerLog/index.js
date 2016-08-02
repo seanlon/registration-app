@@ -21,7 +21,7 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
   render() {
     return (
    
-      <p>
+      <div>
         <Button {...messages.header} href={'/manager/dashboard'} >
              <FormattedMessage {...messages.dashboard} />
         </Button>
@@ -30,7 +30,7 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
         </Button>
 
          <FormattedMessage {...messages.header} />
-      </p>
+      </div>
     );
   }
 }
