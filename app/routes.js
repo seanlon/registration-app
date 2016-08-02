@@ -18,6 +18,40 @@ export default function createRoutes() {
 
   return [
     {
+      path: '/visitor',
+      name: 'visitor',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/Visitor'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
+      path: '/manager',
+      name: 'manager',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/Manager'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    },
+    {
       path: '/',
       name: 'home',
       getComponent(nextState, cb) {

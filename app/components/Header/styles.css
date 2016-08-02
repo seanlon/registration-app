@@ -1,0 +1,52 @@
+ .common-contentbox {
+   width: 80%;
+   margin-right: 10%;
+   margin-left: 10%;
+ }
+ 
+ .common-colorscheme {
+   background-color: #27ae60;
+   color: #fff;
+ }
+ 
+ .common-headertext {
+   color: #f0f0f0;
+   text-align: center;
+   font-weight: 800;
+   min-height: 160px;
+   text-decoration:none ;
+ }
+
+
+ 
+ .header {
+   composes: common-contentbox ;
+   composes: common-colorscheme; width: 80%;
+   margin-right: 10%;
+   margin-left: 10%;
+   /*composes: colorscheme from '../components/General'*/
+ }
+ 
+ .headerText {
+   font-size: 35px;
+   margin: 35px auto 0px;
+   composes: common-headertext;
+ }
+  .headerSubText {
+   font-size: 20px;
+   margin:  5px auto 0px;
+   font-weight:normal;;
+   composes: common-headertext;
+ }
+ 
+ .headerLocale {
+   font-size: 30px;
+   color: #e8f380;
+   margin: 5px auto 5px;
+   composes: common-headertext;
+   min-height:50px;
+ }
+
+section{
+   text-align: center;
+}

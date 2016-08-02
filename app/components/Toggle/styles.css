@@ -1,0 +1,9 @@
+ .toggle {
+   line-height: 1em;
+   min-height: 20px;
+   /*border: 4px solid var(--background-color); */
+   min-width: auto;
+   text-align: center;
+   border: 3px solid white;
+   background: #27ae60;
+ }

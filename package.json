@@ -1,15 +1,15 @@
 {
-  "name": "react-boilerplate",
+  "name": "registration-app",
   "version": "3.0.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "description": "A registration self-service kiosk using react best practices",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mxstbr/react-boilerplate.git"
+    "url": "git://github.com/seanlon/registration-app.git"
   },
   "engines": {
-    "npm": ">=3"
+    "npm": ">=3" 
   },
-  "author": "Max Stoiber",
+  "author": "sean  ",
   "license": "MIT",
   "scripts": {
     "analyze:clean": "rimraf stats.json",

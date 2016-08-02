@@ -4,6 +4,24 @@
  * App container styles
  */
 
+.common-contentbox {
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.common-colorscheme {
+  background-color: #27ae60;
+  color: #fff;
+}
+
 .container {
   display: block;
+  composes: common-contentbox;
+  composes: common-colorscheme;
+}
+
+body {
+  background-color: #27ae60;
+  color: #fff;
 }

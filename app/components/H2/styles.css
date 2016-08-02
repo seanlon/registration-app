@@ -1,0 +1,4 @@
+.heading2 {
+  composes: contentbox from '../components/General'
+  font-size: 1.5em;
+}

@@ -12,14 +12,24 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import Button from 'components/Button';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+    return (   
+  
+      <p>
+        <Button {...messages.header} href={'/visitor'} >
+             <FormattedMessage {...messages.visitor} />
+        </Button>
+        <Button {...messages.header} href={'/manager'} > 
+             <FormattedMessage {...messages.manager} />
+        </Button>
+
+         <FormattedMessage {...messages.header} />
+      </p>
+ 
     );
   }
 }

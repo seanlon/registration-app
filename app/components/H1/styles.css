@@ -1,0 +1,8 @@
+.heading1 {
+ 
+  composes: contentbox from '../components/General'
+  composes: colorscheme from '../components/General' 
+  font-size: 2em;
+  margin-bottom: 0.25em; 
+}
+ 
