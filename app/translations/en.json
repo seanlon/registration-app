@@ -9,6 +9,16 @@
     "defaultMessage": "EN",
     "message": ""
   },
+      {
+        "id": "app.components.Header.message",
+        "defaultMessage": "Self-Service Registration",
+        "message": "Self-Service Registration"
+    },
+    {
+        "id": "app.components.Header.submessage", 
+        "defaultMessage": "Save the Environment",
+        "message": " Save the Environment "
+    },
   {
     "id": "app.components.Footer.author.message",
     "defaultMessage": "Made with love by {author}.",

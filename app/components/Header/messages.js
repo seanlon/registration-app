@@ -7,11 +7,9 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   titleMessage: {
-    id: 'app.components.Header.message',
-    defaultMessage: 'Self-Service Registration',
+    id: 'app.components.Header.message', 
   } ,
     subtitleMessage: {
-    id: 'app.components.Header.submessage',
-    defaultMessage: '  Save the Environment   ',
+    id: 'app.components.Header.submessage', 
   } 
 });

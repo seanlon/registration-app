@@ -23,12 +23,23 @@
     {
         "id": "app.components.Header.message",
         "defaultMessage": "Registrierung Kiosk",
-        "message": "Registrierung Kiosk"
+        "message": "Registrierung Kiosks"
     },
     {
-        "id": "app.components.Header.submessage",
+        "id": "app.components.Header.submessage", 
         "defaultMessage": "Sparen Umwelt immer",
         "message": " Sparen Umwelt immer "
+    },
+
+    {
+        "id": "app.components.HomePage.login", 
+        "defaultMessage": "Eingang",
+        "message": "Eingang "
+    },
+    {
+        "id": "app.components.HomePage.logout", 
+        "defaultMessage": "Ausfart",
+        "message": "Ausfart"
     },
     {
         "id": "app.components.HomePage.visitor",

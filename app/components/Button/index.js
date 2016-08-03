@@ -12,8 +12,7 @@ import styles from './styles.css';
 
 function Button(props) {
   let className = props.className ? props.className : styles.button ;
-    className = props.isAlternate
- ? styles.buttonAlt: className ; 
+      className = props.isAlternate  ? styles.buttonAlt: className ; 
 
   // Render an anchor tag
   let button = (

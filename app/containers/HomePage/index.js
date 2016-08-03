@@ -21,10 +21,11 @@ import Button from 'components/Button';
  
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   
-  /**
-   * Changed route to '/'
-   */
-  openManagerPage = () => {
+  openVisitorPage = ( ) => {
+     this.props.changeRoute('/visitor');
+  };
+
+  openManagerPage = ( ) => {
      this.props.changeRoute('/manager');
   };
 
@@ -32,12 +33,10 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     return (   
   
       <div>
-        <Button {...messages.header} href={'/visitor'} >
+        <Button {...messages.header} handleRoute={this.openVisitorPage }    >
              <FormattedMessage {...messages.visitor} />
         </Button>   
-        <Button {...messages.header}   
-           handleRoute={this.openManagerPage} 
-         isAlternate={true} > 
+        <Button {...messages.header} handleRoute={this.openManagerPage }   isAlternate={true} > 
              <FormattedMessage {...messages.manager} />
         </Button>
 
