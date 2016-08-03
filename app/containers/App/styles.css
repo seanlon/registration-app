@@ -16,7 +16,7 @@
 }
 
  .common-backgroundtree{ 
-    background-image: url('https://www.bforball.com/images/drawing-lessons/tree-46/step5.png');
+    background-image: url('./tree.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding:50px;

@@ -35,8 +35,7 @@ function Button(props) {
 }
 
 Button.propTypes = {
-  className: PropTypes.string,
-  isAlternate: PropTypes.string,
+  className: PropTypes.string, 
   handleRoute: PropTypes.func,
   href: PropTypes.string,
   onClick: PropTypes.func,

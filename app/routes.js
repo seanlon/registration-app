@@ -135,7 +135,10 @@ export default function createRoutes() {
 
         importModules.catch(errorLoading);
       },
-    }, {
+    }, 
+ 
+
+    {
       path: '*',
       name: 'notfound', 
       getComponent(nextState, cb) {

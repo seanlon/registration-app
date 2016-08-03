@@ -28,7 +28,7 @@
     {
         "id": "app.components.Header.submessage",
         "defaultMessage": "Sparen Umwelt immer",
-        "message": "[: Sparen Umwelt immer :]"
+        "message": " Sparen Umwelt immer "
     },
     {
         "id": "app.components.HomePage.visitor",

@@ -15,6 +15,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import styles from './styles.css';
   
+import TreeImage from './tree.png';
 // import Footer from 'components/Footer';
 import Header from 'components/Header';
 import LoadingIndicator from 'components/LoadingIndicator';
@@ -24,18 +25,11 @@ export default class App extends React.Component { // eslint-disable-line react/
   static propTypes = {
     children: React.PropTypes.node,
   };
-
+ 
   render() {
     return ( 
-// <div style="
-//     background: url('https://www.bforball.com/images/drawing-lessons/tree-46/step5.png');
-//     background-repeat:no-repeat;
-//     position: fixed;
-//     top: 0;
-//     height: 100%;
-//     width: 100%;
-//     opacity:0.5;  ">ds</div>
-      <div className={styles.container}> 
+ 
+      <div className={styles.container} style={{background: 'center no-repeat fixed url(' +TreeImage +')'}}> 
        <Helmet
         titleTemplate="%s - Registration App ReactJs"
         defaultTitle="Registration App ReactJs"
@@ -43,7 +37,7 @@ export default class App extends React.Component { // eslint-disable-line react/
           { name: 'description', content: ' Registration App ReactJs' },
         ]}
       />
-        < LoadingIndicator  />
+ 
         <Header/> 
         {this.props.children}
       </div>

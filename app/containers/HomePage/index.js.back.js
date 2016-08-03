@@ -10,23 +10,16 @@
  */
 
 import React from 'react';
-import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
-
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import Button from 'components/Button';  
- 
- 
- 
+import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
+
+
+
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   
-  /**
-   * Changed route to '/'
-   */
-  openManagerPage = () => {
-     this.props.changeRoute('/manager');
-  };
 
   render() {
     return (   
@@ -36,7 +29,10 @@ export default class HomePage extends React.Component { // eslint-disable-line r
              <FormattedMessage {...messages.visitor} />
         </Button>   
         <Button {...messages.header}   
-           handleRoute={this.openManagerPage} 
+          handleRoute={function redirect() {
+            console.log(this)
+            this.props.changeRoute('/manager');
+          }} 
          isAlternate={true} > 
              <FormattedMessage {...messages.manager} />
         </Button>
@@ -63,6 +59,3 @@ function mapDispatchToProps(dispatch) {
 
 // Wrap the component to inject dispatch and state into it
 export default connect(null, mapDispatchToProps)(HomePage);
-
-
- 

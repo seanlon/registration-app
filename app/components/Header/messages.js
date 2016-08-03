@@ -12,6 +12,6 @@ export default defineMessages({
   } ,
     subtitleMessage: {
     id: 'app.components.Header.submessage',
-    defaultMessage: '[: Save the Environment :] ',
+    defaultMessage: '  Save the Environment   ',
   } 
 });
