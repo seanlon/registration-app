@@ -1,9 +1,10 @@
  .toggle {
    line-height: 1em;
    min-height: 20px;
-   /*border: 4px solid var(--background-color); */
+   /*border: 4px solid var(--background-color); 
+   background:  #27ae60;*/
    min-width: auto;
    text-align: center;
    border: 3px solid white;
-   background: #27ae60;
+   background: #27AEA3;
  }

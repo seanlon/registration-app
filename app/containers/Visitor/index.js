@@ -11,19 +11,28 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
 import messages from './messages';
 import Button from 'components/Button';
 
 export default class Visitor extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  openLoginPage = ( ) => {
+     this.props.changeRoute('/visitor/login');
+  };
+
+  openLogoutPage = ( ) => {
+     this.props.changeRoute('/visitor/logout');
+  };
 
   render() {
     return (
    
       <div>
-        <Button {...messages.header} href={'/visitor/login'} >
+        <Button {...messages.header} handleRoute={this.openLoginPage }  >
              <FormattedMessage {...messages.login} />
         </Button>
-        <Button {...messages.header} href={'/visitor/logout'} > 
+        <Button {...messages.header} handleRoute={this.openLogoutPage }  > 
              <FormattedMessage {...messages.logout} />
         </Button>
 
@@ -32,5 +41,22 @@ export default class Visitor extends React.Component { // eslint-disable-line re
     );
   }
 }
+
+ 
+
+Visitor.propTypes = {
+  changeRoute: React.PropTypes.func,
+};
+
+// react-redux stuff
+function mapDispatchToProps(dispatch) {
+  return {
+    changeRoute: (url) => dispatch(push(url)),
+  };
+}
+
+// Wrap the component to inject dispatch and state into it
+export default connect(null, mapDispatchToProps)(Visitor);
+
 
  

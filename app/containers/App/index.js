@@ -19,6 +19,7 @@ import TreeImage from './tree.png';
 // import Footer from 'components/Footer';
 import Header from 'components/Header';
 import LoadingIndicator from 'components/LoadingIndicator';
+import materials from 'components/General/materials.css'; 
  
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -40,7 +41,9 @@ export default class App extends React.Component { // eslint-disable-line react/
  
         <Header/> 
         {this.props.children}
-      </div>
+
+       </div>
     );
   }
-}
+}// <video className={styles.videobg}   src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Coverr-Lulu.mp4" autoPlay loop></video>
+    

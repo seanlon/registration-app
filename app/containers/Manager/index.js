@@ -11,21 +11,32 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
 import messages from './messages'; 
 import Button from 'components/Button';
 
-export default class Manager extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
- 
+
+
+export default  class Manager extends React.Component { // eslint-disable-line react/prefer-stateless-function
+
+  openLogPage = ( ) => {
+     this.props.changeRoute('/manager/log');
+  };
+
+  openDashboardPage = ( ) => {
+     this.props.changeRoute('/manager/dashboard');
+  };
 
   render() {
     return (
    
       <div>
-        <Button {...messages.header} isAlternate={false}  href={'/manager/dashboard'} >
+        <Button {...messages.header} handleRoute={this.openDashboardPage }     >
              <FormattedMessage {...messages.dashboard} />
         </Button>
-        <Button {...messages.header} isAlternate={true}  href={'/manager/log'} > 
+        <Button {...messages.header} isAlternate={true} handleRoute={this.openLogPage }   > 
              <FormattedMessage {...messages.log} />
         </Button>
 
@@ -34,5 +45,23 @@ export default class Manager extends React.Component { // eslint-disable-line re
     );
   }
 }
+
+ 
+
+
+Manager.propTypes = {
+  changeRoute: React.PropTypes.func,
+};
+
+// react-redux stuff
+function mapDispatchToProps(dispatch) {
+  return {
+    changeRoute: (url) => dispatch(push(url)),
+  };
+}
+
+// Wrap the component to inject dispatch and state into it
+export default connect(null, mapDispatchToProps)(Manager);
+
 
  

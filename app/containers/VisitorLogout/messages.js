@@ -1,21 +1,22 @@
-/*
- * HomePage Messages
- *
- * This contains all the text for the HomePage component.
- */
+ 
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  header: {
-    id: 'app.components.HomePage.visitor.instruction',
-    defaultMessage: 'If you are entering the premise, please sign-in. If you are leaving please sign out.',
+  searchrow: {
+    id: 'app.components.logout.searchrow',
+    defaultMessage: 'Search My Name / Identification No:',
   },
-  login: {
-    id: 'app.components.HomePage.login',
-    defaultMessage: 'Check in',
+    resultfail: {
+    id: 'app.components.logout.resultfail',
+    defaultMessage: 'Sorry, we are unable find this particular record. Note, we only search accurately for your name or no. Please key in accurately.', 
   },
-  logout: {
-    id: 'app.components.HomePage.logout',
-    defaultMessage: 'Sign Out',
-  },
+    resultpass: {
+    id: 'app.components.logout.resultpass',
+    defaultMessage: 'Record Found . You are signed out. Thank you for visiting us! ', 
+  } ,
+    ok: {
+    id: 'app.components.logout.ok',
+    defaultMessage: 'Okay! ', 
+  } 
+    
 });
