@@ -64,6 +64,8 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
     <span className={tables.caption} id="contacts-caption-text">    </span>
     <div className={tables.thead}>
         <span className={tables.th}  ><FormattedMessage {...messages.name}/> </span>
+        <span className={tables.th}  ><FormattedMessage {...messages.identification}/> </span>
+        
         <span className={tables.th}  ><FormattedMessage {...messages.purpose}/> </span>
         <span className={tables.th}  ><FormattedMessage {...messages.timein}/> </span>
         <span className={tables.th}  ><FormattedMessage {...messages.timeout}/> </span>

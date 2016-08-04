@@ -75,7 +75,7 @@ export default class VisitorLogout extends React.Component {
        { printMessageHtml  }  
  
          <h4>   { this.state.login?this.state.login.name  :'' }   </h4>
-         <h4>   {this.state.login? this.state.login.summary  :'' }   </h4>
+         <h4>   {this.state.login? this.state.login.identification  :'' }   </h4>
          <h4>   {this.state.login? this.state.login.timein  :'' }   </h4>
          <h4>   {this.state.login? (Moment().format('DD/MM/YYYY HH:mm:ss')) :''  }   </h4>
       

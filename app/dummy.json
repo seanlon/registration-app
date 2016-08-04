@@ -1,17 +1,17 @@
 [
-  {"id":"1","purpose":"INTERVIEW","name":"David","identification":"123123123-32","summary":"Ms Iverson","timein":"05/08/2016 11:34:00","timeout":"05/08/2016 13:34:00","duration":"02:00:00","day":0,"hours":20 },
-  {"id":"2","purpose":"LOGISTIC","name":"Aman Bal","identification":"1883123-32","summary":"Drop private letter","timein":"05/08/2016 11:01:00","timeout":"05/08/2016 14:11:00","duration":"03:10:00","day":70,"hours":82},
-  {"id":"3","purpose":"VISIT","name":"Jimmy Dane","identification":"99923123-32","summary":"Random visit on office","timein":"05/08/2016 11:34:00","timeout":"05/08/2016 12:34:00","duration":"01:00:00","day":100,"hours":80},
-  {"id":"4","purpose":"MAINTENANCE","name":"Yeale Tee","identification":"002312-32","summary":"Fix Computer -Monthly Service","timein":"05/08/2016 11:00:00","timeout":"05/08/2016 11:30:00","duration":"00:30:00","day":10,"hours":180.5},
+  {"id":"1","purpose":"INTERVIEW","name":"David","identification":"123123123-32","summary":"Ms Iverson","timein":"04/08/2016 11:34:00","timeout":"04/08/2016 13:34:00","duration":"02:00:00","day":0,"hours":20 },
+  {"id":"2","purpose":"LOGISTIC","name":"Aman Bal","identification":"1883123-32","summary":"Drop private letter","timein":"04/08/2016 11:01:00","timeout":"04/08/2016 14:11:00","duration":"03:10:00","day":70,"hours":82},
+  {"id":"3","purpose":"VISIT","name":"Jimmy Dane","identification":"99923123-32","summary":"Random visit on office","timein":"04/08/2016 11:34:00","timeout":"04/08/2016 12:34:00","duration":"01:00:00","day":100,"hours":80},
+  {"id":"4","purpose":"MAINTENANCE","name":"Yeale Tee","identification":"002312-32","summary":"Fix Computer -Monthly Service","timein":"04/08/2016 11:00:00","timeout":"04/08/2016 11:30:00","duration":"00:30:00","day":10,"hours":180.5},
 
  {"id":"5","purpose":"INTERVIEW","name":"David","identification":"123123123-32","summary":"Ms Iverson","timein":"05/08/2016 11:34:00","timeout":"05/08/2016 13:34:00","duration":"02:00:00","day":24,"hours":10},
   {"id":"6","purpose":"LOGISTIC","name":"Aman Bal","identification":"1883123-32","summary":"Drop private letter","timein":"05/08/2016 11:01:00","timeout":"05/08/2016 14:11:00","duration":"03:10:00","day":76,"hours":82},
   {"id":"7","purpose":"VISIT","name":"Jimmy Dane","identification":"99923123-32","summary":"Random visit on office","timein":"05/08/2016 11:34:00","timeout":"05/08/2016 12:34:00","duration":"01:00:00","day":80,"hours":70},
   {"id":"8","purpose":"MAINTENANCE","name":"Yeale Tee","identification":"002312-32","summary":"Fix Computer -Monthly Service","timein":"05/08/2016 11:00:00","timeout":"05/08/2016 11:30:00","duration":"00:30:00","day":600,"hours":380.5},
 
- {"id":"9","purpose":"INTERVIEW","name":"David","identification":"123123123-32","summary":"Ms Iverson","timein":"05/08/2016 11:34:00","timeout":"05/08/2016 13:34:00","duration":"02:00:00","day":100,"hours":200},
-  {"id":"10","purpose":"LOGISTIC","name":"Aman Bal","identification":"1883123-32","summary":"Drop private letter","timein":"05/08/2016 11:01:00","timeout":"05/08/2016 14:11:00","duration":"03:10:00","day":300,"hours":300.1},
-  {"id":"11","purpose":"VISIT","name":"Jimmy Dane","identification":"99923123-32","summary":"Random visit on office","timein":"05/08/2016 11:34:00","timeout":"05/08/2016 12:34:00","duration":"01:00:00","day":80,"hours":20},
-  {"id":"12","purpose":"MAINTENANCE","name":"Yeale Tee","identification":"002312-32","summary":"Fix Computer -Monthly Service","timein":"05/08/2016 11:00:00","timeout":"05/08/2016 11:30:00","duration":"00:30:00","day":600,"hours":580.5} 
+ {"id":"9","purpose":"INTERVIEW","name":"David","identification":"123123123-32","summary":"Ms Iverson","timein":"06/08/2016 11:34:00","timeout":"06/08/2016 13:34:00","duration":"02:00:00","day":100,"hours":200},
+  {"id":"10","purpose":"LOGISTIC","name":"Aman Bal","identification":"1883123-32","summary":"Drop private letter","timein":"06/08/2016 11:01:00","timeout":"06/08/2016 14:11:00","duration":"03:10:00","day":300,"hours":300.1},
+  {"id":"11","purpose":"VISIT","name":"Jimmy Dane","identification":"99923123-32","summary":"Random visit on office","timein":"06/08/2016 11:34:00","timeout":"06/08/2016 12:34:00","duration":"01:00:00","day":80,"hours":20},
+  {"id":"12","purpose":"MAINTENANCE","name":"Yeale Tee","identification":"002312-32","summary":"Fix Computer -Monthly Service","timein":"06/08/2016 11:00:00","timeout":"06/08/2016 11:30:00","duration":"00:30:00","day":600,"hours":580.5} 
 
 ] 
