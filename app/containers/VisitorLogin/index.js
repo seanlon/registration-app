@@ -30,7 +30,12 @@ constructor(props) {
      this.props.changeRoute('/');
   }; 
    
- 
+   submitForm = (ev ) => {
+     this.state.step = 2;
+     this.setState(this.state);
+     this.props.onSubmitForm( ev); 
+  }; 
+   
     
  handleChange = ( evt ) => {
   
@@ -47,11 +52,11 @@ constructor(props) {
     //    this.setState({ todos: this.state.todos });
   };
 
+  
+
+
   render() {
-    return (
-   
-     <div>
-    <form onSubmit={this.props.onSubmitForm}>
+  let step1Html= (  <form onSubmit={this.submitForm}>
         <div className={materials.formgroup}>
             <select name="purpose" onChange={this.handleChange}>
                 <option value="INTERVIEW">Interview</option>
@@ -87,19 +92,26 @@ constructor(props) {
                 <FormattedMessage {...messages.tnc} />
             </label>
         </div>
-    <Button {...messages.header}  onClick={this.props.onSubmitForm}>
+    <Button {...messages.header}  onClick={this.submitForm}>
         <FormattedMessage {...messages.submit} />
     </Button>
-    </form>
-    <div className={materials.middle}>
+    </form>    ) ;
+
+
+
+  let  step2Html = (
+   <div className={materials.middle}>
         <h1>  <FormattedMessage {...messages.agent} /> </h1>
         <Img className={materials.logo} src={AgentImgSrc} alt="agent face" />
         <h3>  <FormattedMessage {...messages.agentcontent} /> </h3>
         <Button handleRoute={this.openHomePage }>
             <FormattedMessage {...messages.ok} />
         </Button>
-    </div>
-</div>
+    </div> ) ;
+
+
+    return (
+     <div>  { this.state.step == 1  ?step1Html : step2Html } </div>
 
     );
   }
@@ -121,8 +133,8 @@ function mapDispatchToProps(dispatch) {
   return {
     changeRoute: (url) => dispatch(push(url)),
     onSubmitForm: (evt) => {
-      if (evt !== undefined && evt.preventDefault) evt.preventDefault(); 
-
+      if (evt !== undefined && evt.preventDefault) evt.preventDefault();  
+      
     },
     addNewRecord: (rowInfo) => {      
       dispatch(addNewRecord(rowInfo ));

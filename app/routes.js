@@ -21,20 +21,23 @@ export default function createRoutes(store) {
       path: '/visitor',
       name: 'visitor',
       getComponent(nextState, cb) {
+       
         const importModules = Promise.all([
-          System.import('containers/Visitor'),
+          System.import('containers/visitor'),
         ]);
 
         const renderRoute = loadModule(cb);
 
-        importModules.then(([reducer,component]) => {
-          injectReducer('login', reducer.default);
+        importModules.then(([component]) => {
           renderRoute(component);
         });
-  
+
         importModules.catch(errorLoading);
       },
     },
+ 
+
+
     {
       path: '/visitor/login',
       name: 'visitorlogin',
