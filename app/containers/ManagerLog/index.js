@@ -64,7 +64,7 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
     <span className={tables.caption} id="contacts-caption-text">    </span>
     <div className={tables.thead}>
         <span className={tables.th}  ><FormattedMessage {...messages.name}/> </span>
-        <span className={tables.th}  ><FormattedMessage {...messages.identification}/> </span>
+        <span className={tables.th}  ><FormattedMessage {...messages.userno}/> </span>
         
         <span className={tables.th}  ><FormattedMessage {...messages.purpose}/> </span>
         <span className={tables.th}  ><FormattedMessage {...messages.timein}/> </span>
@@ -83,6 +83,10 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
             <span className={tables.td}>
               <span className={tables.label}><FormattedMessage {...messages.name}/>  </span>
               <span className={tables.data}    >{login.name}</span>
+            </span> 
+            <span className={tables.td}>
+              <span className={tables.label}><FormattedMessage {...messages.userno}/>  </span>
+              <span className={tables.data}    >{login.identification}</span>
             </span> 
              <span className={tables.td}>
               <span className={tables.label}><FormattedMessage {...messages.purpose}/>  </span>
