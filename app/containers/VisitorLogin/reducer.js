@@ -14,15 +14,15 @@ import {
 import { fromJS } from 'immutable';
 
 // The initial state of the App
-const initialState = fromJS({
-  rowInfo: {purpose:'',name:'',identification:'',summary:''},
-});
-
+// const initialState = fromJS({
+//   rowInfo: {purpose:'',name:'',identification:'',summary:''},
+// });
+const initialState = fromJS(  {purpose:'',name:'',identification:'',summary:''} );
 function loginReducer(state = initialState, action) {
  
   switch (action.type) {
     case ADD_NEW_RECORD:
-      console.log(action.rowInfo)
+      console.log(action  )
       return state.set('rowInfo', action.rowInfo);
     default:
       return state;
@@ -30,3 +30,5 @@ function loginReducer(state = initialState, action) {
 }
 
 export default loginReducer;
+
+ 

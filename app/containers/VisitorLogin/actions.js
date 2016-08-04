@@ -27,9 +27,9 @@ import {
  *
  * @return {object}    An action object with a type of ADD_NEW_RECORD
  */
-export function addNewRecord(_obj) {
+export function addNewRecord(rowInfo) {
   return {
     type: ADD_NEW_RECORD,
-    _obj,
+    rowInfo,
   };
 }

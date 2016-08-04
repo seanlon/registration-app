@@ -124,8 +124,8 @@ function mapDispatchToProps(dispatch) {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault(); 
 
     },
-    addNewRecord: (rowInfo) => {   
-      dispatch(addNewRecord( ));
+    addNewRecord: (rowInfo) => {      
+      dispatch(addNewRecord(rowInfo ));
     } ,
   };
 }

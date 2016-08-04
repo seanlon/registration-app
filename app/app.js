@@ -47,7 +47,7 @@ const history = syncHistoryWithStore(browserHistory, store, {
 import App from 'containers/App';
 import createRoutes from './routes';
 const rootRoute = {
-  component: App,
+  component: App,    
   childRoutes: createRoutes(store),
 };
 
