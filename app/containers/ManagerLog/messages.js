@@ -13,6 +13,10 @@ export default defineMessages({
     defaultMessage: 'Search Anything here...',
   },
   
+    fail: {
+    id: 'app.components.dashboard.fail',
+    defaultMessage: 'No record found', 
+  } ,
     title: {
     id: 'app.components.dashboard.title',
     defaultMessage: 'Visitor Log Record',

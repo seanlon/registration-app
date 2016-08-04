@@ -115,14 +115,12 @@ export default function createRoutes(store) {
       getComponent(nextState, cb) {
  
         const importModules = Promise.all([
-          System.import('containers/VisitorLogin/reducer'), 
-          System.import('containers/VisitorLogin'),
+          System.import('containers/ManagerLog'),
         ]);
 
         const renderRoute = loadModule(cb);
 
-        importModules.then(([reducer,   component]) => {
-          injectReducer('log', reducer.default); 
+        importModules.then(([ component]) => { 
           renderRoute(component);
         });
 

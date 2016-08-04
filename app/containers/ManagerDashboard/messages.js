@@ -7,13 +7,10 @@ import { defineMessages } from 'react-intl';
 
  
 export default defineMessages({
-  header: {
-    id: 'app.components.HomePage.manager.instruction',
-    defaultMessage: 'Please proceed only if you are authorized. Otherwise ,please be cautioned that we can prosecute you under 113 Security Data Act',
-  },
-    dashboard: {
-    id: 'app.components.HomePage.dashboard',
-    defaultMessage: 'Dashboard',
+ 
+    title: {
+    id: 'app.components.manager.dashboard',
+    defaultMessage: 'Expenses[x] vs Revenues[y] for Each Visitation',
   },
   
     log: {

@@ -45,12 +45,7 @@ constructor(props) {
   
      const keyDesc =  evt.target.name;
      this.state.rowInfo[keyDesc] = evt.target.value    ;   
-    // this.props.onChange(Object.assign({}, oldContact, {name: evt.target.value})); 
-    // console.log( this.state);
-    //  this.state.rowInfo.push({ 
-    //        name: evt.value
-    //    });
-    //    this.setState({ todos: this.state.todos });
+ 
   };
 
   
@@ -140,6 +135,8 @@ function mapDispatchToProps(dispatch) {
     addNewRecord: (rowInfo) => {      
 
       rowInfo['timeIn'] = (Moment().format('DD/MM/YYYY HH:mm:ss'));
+      console.log((Moment().format('DD/MM/YYYY HH:mm:ss')));
+      console.log(moment.utc(moment(now,"DD/MM/YYYY HH:mm:ss").diff(moment(then,"DD/MM/YYYY HH:mm:ss"))).format("HH:mm:ss"))
        // moment.utc(moment(now,"DD/MM/YYYY HH:mm:ss").diff(moment(then,"DD/MM/YYYY HH:mm:ss"))).format("HH:mm:ss")
       dispatch(addNewRecord(rowInfo ));
     } ,
@@ -147,14 +144,10 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-const mapStateToProps = (state)=>  { 
-  console.log(state)
-   return { todos: ['1','2']}
-} 
-
+const mapStateToProps = (state)=>  {
  
-
-
+   return {  }
+} 
 // Wrap the component to inject dispatch and state into it   
 export default connect(mapStateToProps, mapDispatchToProps)(VisitorLogin);
 

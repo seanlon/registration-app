@@ -49,15 +49,15 @@ export default loginReducer;
 const initialLoginsState = fromJS( [] );
 function loginListReducer(state = initialLoginsState, action) {
  
-	switch(action.type){
-  	case ADD_NEW_RECORD:
-    	return [
-      	...state,
+  switch(action.type){
+    case ADD_NEW_RECORD:
+      return [
+        ...state,
         loginReducer(state, action.rowInfo)
       ];
     case UPD_OLD_RECORD:
-    	return state.map(t => loginReducer(t, action.rowInfo));
-   	default:
+      return state.map(t => loginReducer(t, action.rowInfo));
+    default:
       return state;
   }
 } 
@@ -65,14 +65,14 @@ function loginListReducer(state = initialLoginsState, action) {
 
  
 const visibilityFilter = (
-	state = 'SHOW_ALL',
-  	action
+  state = 'SHOW_ALL',
+    action
  ) => {
- 	switch (action.type){
-  	case 'SET_VISIBILITY_FILTER':
-    	return action.filter;
+  switch (action.type){
+    case 'SET_VISIBILITY_FILTER':
+      return action.filter;
     default:
-    	return state;
+      return state;
   }
 };
 

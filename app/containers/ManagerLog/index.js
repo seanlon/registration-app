@@ -13,6 +13,8 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages'; 
 import Button from 'components/Button';
+import logins from '../../dummy.json';
+import Moment from 'moment';
  
 import Img from 'components/Img'; 
 import materials from 'components/General/materials.css'; 
@@ -20,25 +22,47 @@ import tables from 'components/General/responsivelist.css';
 
 
 export default class ManagerDashboard extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
+   constructor(props) {
+      super(props)
+ 
+      this.state ={ 
+          login:null, 
+          logins: logins,
+          filter:null
+      }
+  };
+ 
  
 
+   handleChange = ( evt ) => { 
+    this.state.filter =     evt.target.value    ;   
+    this.state.logins = logins;
+    this.state.logins =  this.state.logins.filter(login => login.name.toUpperCase().indexOf(this.state.filter.toUpperCase())>-1  
+    || login.purpose.toUpperCase().indexOf(this.state.filter.toUpperCase())>-1   || login.identification.toUpperCase().indexOf(this.state.filter.toUpperCase())>-1  || login.summary.toUpperCase().indexOf(this.state.filter.toUpperCase())>-1     );
+    
+    console.log(this.state.logins )
+    this.setState(this.state); 
+  };
+
   render() {
+ 
+
     return (
    
   <div >
-     <h1 className={materials.middle}>
+     <h className={materials.middle}>
          <FormattedMessage {...messages.title} />
-      </h1>
+      </h>
      <div className={materials.formgroup}>
-      <input type="text" required="required"/>
-      <label htmlFor="input" className={materials.controllabel}><FormattedMessage {...messages.name} /></label><i className={materials.bar}></i>
+      <input type="text" required="required" onChange={this.handleChange}/>
+      <label htmlFor="input" className={materials.controllabel}><FormattedMessage {...messages.search} /></label><i className={materials.bar}></i>
     </div>
 
      <div>
 
-<div className={tables.tablecore}  aria-labelledby="contacts-caption-text">
-    <span className={tables.caption} id="contacts-caption-text">Responsive contact list</span>
+
+<div className={tables.tablecore}  aria-labelledby="contacts-caption-text" >
+    <span className={tables.caption} id="contacts-caption-text">    </span>
     <div className={tables.thead}>
         <span className={tables.th}  ><FormattedMessage {...messages.name}/> </span>
         <span className={tables.th}  ><FormattedMessage {...messages.purpose}/> </span>
@@ -47,31 +71,38 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
         <span className={tables.th}  ><FormattedMessage {...messages.duration}/> </span>
  
     </div>
+
+ 
+
+
     <ul className={tables.tbody}>
-        <li className={tables.tr}    >
+
+     {this.state.logins.map(login =>
+        <li className={tables.tr}   key = {login.id}  >
             <span className={tables.td}>
               <span className={tables.label}><FormattedMessage {...messages.name}/>  </span>
-              <span className={tables.data}    >Ola Nordmann</span>
+              <span className={tables.data}    >{login.name}</span>
             </span> 
              <span className={tables.td}>
               <span className={tables.label}><FormattedMessage {...messages.purpose}/>  </span>
-              <span className={tables.data}   >Interview</span>
+              <span className={tables.data}   >{login.purpose}</span>
             </span>
              <span className={tables.td}>
               <span className={tables.label}><FormattedMessage {...messages.timein}/>  </span>
-              <span className={tables.data}   >12:23 9-May-2016 </span>
+              <span className={tables.data}   >{login.timein} </span>
             </span>
             <span className={tables.td}>
               <span className={tables.label}><FormattedMessage {...messages.timeout}/>  </span>
-              <span className={tables.data}   >13:23 9-May-2016 </span>
+              <span className={tables.data}   >{login.timeout} </span>
             </span>
             <span className={tables.td}>
               <span className={tables.label}><FormattedMessage {...messages.duration}/> </span>
-             <span className={tables.data} >  8 hours </span>
+             <span className={tables.data} >{login.duration} </span>
             </span>
         </li>
-        
+       )}
     </ul>
+     { this.state.logins.length<1?  (<h3> <br/><br/> <FormattedMessage {...messages.fail} /> <br/> <br/><br/> </h3> ) : ''} 
 </div>
 
      </div>

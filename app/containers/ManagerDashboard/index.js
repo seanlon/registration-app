@@ -17,35 +17,98 @@ import { push } from 'react-router-redux';
 import messages from './messages'; 
 import Button from 'components/Button';
 import materials from 'components/General/materials.css'; 
+import logins from '../../dummy.json';
  
 export default class ManagerLog extends React.Component { // eslint-disable-line react/prefer-stateless-function
+   constructor(props) {
+      super(props)
+ 
+      this.state ={  
+          logins: logins,
+          chartData: [],
+          filter:null
+      }
 
   
+       // FORMAT   
+      //  {
+      //   name: "series1",
+      //   values: [ { x: 0, y: 20 },   { x: 24, y: 10 } ]
+      // }              
+                 
+
+    // series is purpose
+    // x is which day
+    // y is duration
+ 
+    this.state.logins['INTERVIEW']  =this.state.logins.filter(login =>    login.purpose.toUpperCase().indexOf("INTERVIEW".toUpperCase())>-1  ); 
+ 
+     this.state.logins['INTERVIEW'] =  this.state.logins['INTERVIEW'].map(function(obj){ 
+       var rObj = {};
+       rObj['y'] = obj.day;
+       rObj['x'] = obj.hours ;
+       return rObj;  
+    });
+
+
+    this.state.logins['VISIT'] = this.state.logins.filter(login =>    login.purpose.toUpperCase().indexOf("VISIT".toUpperCase())>-1  ); 
+       this.state.logins['VISIT'] =  this.state.logins['VISIT'].map(function(obj){ 
+       var rObj = {};
+       rObj['y'] = obj.day;
+       rObj['x'] = obj.hours ;
+       return rObj;  
+    });
+
+    this.state.logins['LOGISTIC']  =this.state.logins.filter(login =>    login.purpose.toUpperCase().indexOf("LOGISTIC".toUpperCase())>-1  ); 
+     this.state.logins['LOGISTIC'] =  this.state.logins['LOGISTIC'].map(function(obj){ 
+       var rObj = {};
+       rObj['y'] = obj.day;
+       rObj['x'] = obj.hours ;
+       return rObj;  
+    });
+    this.state.logins['MAINTENANCE'] = this.state.logins.filter(login =>    login.purpose.toUpperCase().indexOf("MAINTENANCE".toUpperCase())>-1  ); 
+     this.state.logins['MAINTENANCE'] =  this.state.logins['MAINTENANCE'].map(function(obj){ 
+       var rObj = {};
+       rObj['y'] = obj.day;
+       rObj['x'] = obj.hours ;
+       return rObj;  
+    });
+
+    this.state.chartData.push({name: "INTERVIEW" , values:this.state.logins['INTERVIEW'] });
+    this.state.chartData.push({name: "MAINTENANCE" , values:this.state.logins['MAINTENANCE'] });
+    this.state.chartData.push({name: "LOGISTIC" , values:this.state.logins['LOGISTIC'] });
+    this.state.chartData.push({name: "VISIT" , values:this.state.logins['VISIT'] }); 
+ 
+  };
+ 
 
   render() {
-      let  lineData = [
-      {
-        name: "series1",
-        values: [ { x: 0, y: 20 },   { x: 24, y: 10 } ]
-      }, 
-        {
-          name: "series2",
-          values: [ { x: 70, y: 82 },   { x: 76, y: 82 } ]
-        }
+      // let  lineData = [
+      // {
+      //   name: "series1",
+      //   values: [ { x: 0, y: 20 },   { x: 24, y: 10 } ]
+      // }, 
+      //   {
+      //     name: "series2",
+      //     values: [ { x: 70, y: 82 },   { x: 76, y: 82 } ]
+      //   }
      
-      ];
+      // ];
     return (
-   
-      <div className={materials.middle}>
-
+   <div>
+     <h1 className={materials.middle}>
+         <FormattedMessage {...messages.title} />
+      </h1>
+      <div className={materials.middle}> 
             <LineChart
             legend={true}
-            data={lineData}
-            width={500}
-            height={300}
-            title="Line Chart"
+            data={this.state.chartData}
+            width={'700'}
+            height={500}
+            title="   "
             />
-  
+      
+      </div>
       </div>
     );
   }
