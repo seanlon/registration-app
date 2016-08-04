@@ -18,11 +18,10 @@ function Header(props) {
     <header className={styles.header}>   
       <section   onClick={function redirect() {    props.changeRoute('/');    }}  > 
           <a   className={styles.headerText}       >  
-              <span >  <FormattedMessage {...messages.titleMessage}  /> </span>  <br/> 
-  
-              <label  >
+              <span >  <FormattedMessage {...messages.titleMessage}  /> </span>  <br/>  
+               
                  <span  className={styles.headerSubText}>  <FormattedMessage {...messages.subtitleMessage}  /> </span>  
-              </label>
+           
           </a>    
  
       </section> 
