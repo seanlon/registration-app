@@ -135,11 +135,9 @@ function mapDispatchToProps(dispatch) {
     addNewRecord: (rowInfo) => {      
 
       rowInfo['timeIn'] = (Moment().format('DD/MM/YYYY HH:mm:ss'));
-      console.log((Moment().format('DD/MM/YYYY HH:mm:ss')));
-      console.log(moment.utc(moment(now,"DD/MM/YYYY HH:mm:ss").diff(moment(then,"DD/MM/YYYY HH:mm:ss"))).format("HH:mm:ss"))
-       // moment.utc(moment(now,"DD/MM/YYYY HH:mm:ss").diff(moment(then,"DD/MM/YYYY HH:mm:ss"))).format("HH:mm:ss")
+        // Moment.utc(Moment(now,"DD/MM/YYYY HH:mm:ss").diff(Moment(then,"DD/MM/YYYY HH:mm:ss"))).format("HH:mm:ss")
       dispatch(addNewRecord(rowInfo ));
-    } ,
+    } , 
   };
 }
 

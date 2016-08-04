@@ -136,8 +136,7 @@ export default function createRoutes(store) {
           System.import('containers/HomePage'),
         ]);
 
-        const renderRoute = loadModule(cb); 
-        console.log(store.getState('rowInfo')) 
+        const renderRoute = loadModule(cb);  
 
         importModules.then(([component]) => {
           renderRoute(component);

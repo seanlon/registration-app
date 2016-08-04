@@ -39,8 +39,7 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
     this.state.logins = logins;
     this.state.logins =  this.state.logins.filter(login => login.name.toUpperCase().indexOf(this.state.filter.toUpperCase())>-1  
     || login.purpose.toUpperCase().indexOf(this.state.filter.toUpperCase())>-1   || login.identification.toUpperCase().indexOf(this.state.filter.toUpperCase())>-1  || login.summary.toUpperCase().indexOf(this.state.filter.toUpperCase())>-1     );
-    
-    console.log(this.state.logins )
+     
     this.setState(this.state); 
   };
 
@@ -50,9 +49,9 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
     return (
    
   <div >
-     <h className={materials.middle}>
+     <h3 className={materials.middle}>
          <FormattedMessage {...messages.title} />
-      </h>
+      </h3>
      <div className={materials.formgroup}>
       <input type="text" required="required" onChange={this.handleChange}/>
       <label htmlFor="input" className={materials.controllabel}><FormattedMessage {...messages.search} /></label><i className={materials.bar}></i>
@@ -102,7 +101,9 @@ export default class ManagerDashboard extends React.Component { // eslint-disabl
         </li>
        )}
     </ul>
+
      { this.state.logins.length<1?  (<h3> <br/><br/> <FormattedMessage {...messages.fail} /> <br/> <br/><br/> </h3> ) : ''} 
+   <br/> <br/><br/>
 </div>
 
      </div>

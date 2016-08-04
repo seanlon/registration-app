@@ -96,9 +96,9 @@ export default class ManagerLog extends React.Component { // eslint-disable-line
       // ];
     return (
    <div>
-     <h1 className={materials.middle}>
+     <h3 className={materials.middle}>
          <FormattedMessage {...messages.title} />
-      </h1>
+      </h3>
       <div className={materials.middle}> 
             <LineChart
             legend={true}
