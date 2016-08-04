@@ -1,5 +1,6 @@
  
 import React from 'react';
+import Moment from 'moment';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
@@ -18,7 +19,7 @@ import AgentImgSrc from './dasha.jpg';
 import materials from 'components/General/materials.css'; 
 
 export default class VisitorLogin extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  
+ 
 constructor(props) {
     super(props)
     this.state ={ 
@@ -34,16 +35,14 @@ constructor(props) {
      this.state.step = 2;
      this.setState(this.state);
      this.props.onSubmitForm( ev); 
+     this.props.addNewRecord( this.state.rowInfo ) ;  
   }; 
    
     
  handleChange = ( evt ) => {
   
      const keyDesc =  evt.target.name;
-     this.state.rowInfo[keyDesc] = evt.target.value    ; 
-     this.props.addNewRecord( this.state.rowInfo ) ; 
-
-
+     this.state.rowInfo[keyDesc] = evt.target.value    ;   
     // this.props.onChange(Object.assign({}, oldContact, {name: evt.target.value})); 
     // console.log( this.state);
     //  this.state.rowInfo.push({ 
@@ -86,12 +85,9 @@ constructor(props) {
                 <FormattedMessage {...messages.summary} />
             </label><i className={materials.bar}></i>
         </div>
-        <div className={materials.checkbox}>
-            <label htmlFor={"checkbox"}>
-                <input type="checkbox"   name="tnc"  onChange={this.handleChange}/><i className={materials.helper}></i>
-                <FormattedMessage {...messages.tnc} />
-            </label>
-        </div>
+ 
+
+         <FormattedMessage {...messages.tnc} />
     <Button {...messages.header}  onClick={this.submitForm}>
         <FormattedMessage {...messages.submit} />
     </Button>
@@ -137,6 +133,9 @@ function mapDispatchToProps(dispatch) {
       
     },
     addNewRecord: (rowInfo) => {      
+
+      rowInfo['timeIn'] = (Moment().format('DD/MM/YYYY HH:mm:ss'));
+       // moment.utc(moment(now,"DD/MM/YYYY HH:mm:ss").diff(moment(then,"DD/MM/YYYY HH:mm:ss"))).format("HH:mm:ss")
       dispatch(addNewRecord(rowInfo ));
     } ,
   };

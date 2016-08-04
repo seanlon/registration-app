@@ -19,7 +19,9 @@ import TreeImage from './tree.png';
 // import Footer from 'components/Footer';
 import Header from 'components/Header';
 import LoadingIndicator from 'components/LoadingIndicator';
-import materials from 'components/General/materials.css'; 
+import materials from 'components/General/materials.css';  
+import animation from 'components/General/animation.css'; 
+
  
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -29,20 +31,21 @@ export default class App extends React.Component { // eslint-disable-line react/
  
   render() {
     return ( 
- 
-      <div className={styles.container} style={{background: 'center no-repeat fixed url(' +TreeImage +')'}}> 
-       <Helmet
-        titleTemplate="%s - Registration App ReactJs"
-        defaultTitle="Registration App ReactJs"
-        meta={[
-          { name: 'description', content: ' Registration App ReactJs' },
-        ]}
-      />
- 
-        <Header/> 
-        {this.props.children}
-
-       </div>
+    <div  className={animation.bounceEffect} >
+        <div className={styles.container} style={{background: 'center no-repeat fixed url(' +TreeImage +')'}}> 
+         <Helmet
+          titleTemplate="%s - Registration App ReactJs"
+          defaultTitle="Registration App ReactJs"
+          meta={[
+            { name: 'description', content: ' Registration App ReactJs' },
+          ]}
+        />
+          <div  className={animation.fadeInEffect} >
+            <Header/> 
+            {this.props.children}
+          </div> 
+       </div> 
+    </div>
     );
   }
 }// <video className={styles.videobg}   src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Coverr-Lulu.mp4" autoPlay loop></video>

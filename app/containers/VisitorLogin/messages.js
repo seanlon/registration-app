@@ -20,7 +20,7 @@ export default defineMessages({
   }, 
     tnc: {
     id: 'app.components.login.tnc',
-    defaultMessage: 'I understand that my visit to this office will subject me to rules and policies that i will hereby abide.', 
+    defaultMessage: 'By proceeding, I understand that my visit to this office will subject me to rules and policies that i will hereby abide.', 
   } ,
     submit: {
     id: 'app.components.login.submit',

@@ -33,13 +33,13 @@ export default  class Manager extends React.Component { // eslint-disable-line r
     return (
    
       <div>
-        <Button {...messages.header} handleRoute={this.openDashboardPage }     >
-             <FormattedMessage {...messages.dashboard} />
-        </Button>
         <Button {...messages.header} isAlternate={true} handleRoute={this.openLogPage }   > 
              <FormattedMessage {...messages.log} />
         </Button>
 
+        <Button {...messages.header} handleRoute={this.openDashboardPage }     >
+             <FormattedMessage {...messages.dashboard} />
+        </Button>
          <FormattedMessage {...messages.header} />
       </div>
     );

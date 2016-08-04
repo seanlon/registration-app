@@ -21,8 +21,9 @@ const initialState = fromJS(  {purpose:'',name:'',identification:'',summary:''} 
 function loginReducer(state = initialState, action) {
  
   switch (action.type) {
-    case ADD_NEW_RECORD:
-      console.log(action  )
+    case ADD_NEW_RECORD: 
+    	state.set('rowInfo', action.rowInfo) ; 
+    	console.log(state );
       return state.set('rowInfo', action.rowInfo);
     default:
       return state;

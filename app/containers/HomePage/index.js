@@ -17,8 +17,6 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import Button from 'components/Button';  
  
- 
- 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   
   openVisitorPage = ( ) => {
@@ -32,7 +30,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
   render() {
     return (   
   
-      <div>
+      <div >
         <Button {...messages.header} handleRoute={this.openVisitorPage }    >
              <FormattedMessage {...messages.visitor} />
         </Button>   
