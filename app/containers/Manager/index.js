@@ -15,8 +15,7 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import messages from './messages'; 
 import Button from 'components/Button';
-
-
+ 
 
 
 export default  class Manager extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -33,11 +32,11 @@ export default  class Manager extends React.Component { // eslint-disable-line r
     return (
    
       <div>
-        <Button {...messages.header} isAlternate={true} handleRoute={this.openLogPage }   > 
+        <Button  isAlternate={true} handleRoute={this.openLogPage }   > 
              <FormattedMessage {...messages.log} />
         </Button>
 
-        <Button {...messages.header} handleRoute={this.openDashboardPage }     >
+        <Button  handleRoute={this.openDashboardPage }     >
              <FormattedMessage {...messages.dashboard} />
         </Button>
          <FormattedMessage {...messages.header} />

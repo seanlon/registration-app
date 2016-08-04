@@ -11,10 +11,6 @@ export default defineMessages({
     title: {
     id: 'app.components.manager.dashboard',
     defaultMessage: 'Expenses[x] vs Revenues[y] for Each Visitation',
-  },
-  
-    log: {
-    id: 'app.components.HomePage.log',
-    defaultMessage: 'Log',
-  },
+  }, 
 });
+ 

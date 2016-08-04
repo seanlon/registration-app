@@ -97,13 +97,13 @@ export default class ManagerLog extends React.Component { // eslint-disable-line
     return (
    <div>
      <h3 className={materials.middle}>
-         <FormattedMessage {...messages.title} />
+        
       </h3>
       <div className={materials.middle}> 
             <LineChart
             legend={true}
             data={this.state.chartData}
-            width={'700'}
+            width={700}
             height={500}
             title="   "
             />
