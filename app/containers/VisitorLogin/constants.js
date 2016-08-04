@@ -10,3 +10,4 @@
  */
 
 export const ADD_NEW_RECORD = 'registration-app/VisitorLogin/ADD_NEW_RECORD';
+export const UPD_OLD_RECORD = 'registration-app/VisitorLogin/UPD_OLD_RECORD';

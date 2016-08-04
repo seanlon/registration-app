@@ -16,7 +16,7 @@
  */
 
 import {
-  ADD_NEW_RECORD,
+  ADD_NEW_RECORD,UPD_OLD_RECORD
 } from './constants';
 
 /**
@@ -30,6 +30,13 @@ import {
 export function addNewRecord(rowInfo) {
   return {
     type: ADD_NEW_RECORD,
+    rowInfo,
+  };
+}
+
+export function updOldRecord(rowInfo) {
+  return {
+    type: UPD_OLD_RECORD,
     rowInfo,
   };
 }

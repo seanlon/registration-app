@@ -49,7 +49,7 @@ export default function createRoutes(store) {
         ]);
 
         const renderRoute = loadModule(cb);
-        importModules.then(([reducer,   component]) => {
+        importModules.then(([reducer,   component]) => { 
           injectReducer('login', reducer.default);  
           renderRoute(component);
         });
@@ -113,15 +113,19 @@ export default function createRoutes(store) {
       path: '/manager/log',
       name: 'managerlog',
       getComponent(nextState, cb) {
+ 
         const importModules = Promise.all([
-          System.import('containers/ManagerLog'),
+          System.import('containers/VisitorLogin/reducer'), 
+          System.import('containers/VisitorLogin'),
         ]);
 
         const renderRoute = loadModule(cb);
 
-        importModules.then(([component]) => {
+        importModules.then(([reducer,   component]) => {
+          injectReducer('log', reducer.default); 
           renderRoute(component);
         });
+
 
         importModules.catch(errorLoading);
       },
@@ -134,7 +138,8 @@ export default function createRoutes(store) {
           System.import('containers/HomePage'),
         ]);
 
-        const renderRoute = loadModule(cb);
+        const renderRoute = loadModule(cb); 
+        console.log(store.getState('rowInfo')) 
 
         importModules.then(([component]) => {
           renderRoute(component);

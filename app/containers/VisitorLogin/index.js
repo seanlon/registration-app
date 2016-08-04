@@ -7,7 +7,9 @@ import { push } from 'react-router-redux';
 import messages from './messages';
 import Button from 'components/Button';
   
+
 import { createStructuredSelector } from 'reselect';
+import { loginReducer,loginListReducer } from './reducer';
 import {
   selectRowInfo,
 } from './selectors'; 
@@ -31,7 +33,7 @@ constructor(props) {
      this.props.changeRoute('/');
   }; 
    
-   submitForm = (ev ) => {
+   submitForm = (ev ) => { 
      this.state.step = 2;
      this.setState(this.state);
      this.props.onSubmitForm( ev); 
@@ -55,7 +57,10 @@ constructor(props) {
 
 
   render() {
-  let step1Html= (  <form onSubmit={this.submitForm}>
+  let step1Html= (  
+
+
+   <form onSubmit={this.submitForm}>
         <div className={materials.formgroup}>
             <select name="purpose" onChange={this.handleChange}>
                 <option value="INTERVIEW">Interview</option>
@@ -140,11 +145,17 @@ function mapDispatchToProps(dispatch) {
     } ,
   };
 }
-const mapStateToProps = createStructuredSelector({ 
-  rowInfo: selectRowInfo() 
-});
-// Wrap the component to inject dispatch and state into it  
 
-export default connect(null, mapDispatchToProps)(VisitorLogin);
+
+const mapStateToProps = (state)=>  { 
+  console.log(state)
+   return { todos: ['1','2']}
+} 
+
+ 
+
+
+// Wrap the component to inject dispatch and state into it   
+export default connect(mapStateToProps, mapDispatchToProps)(VisitorLogin);
 
  

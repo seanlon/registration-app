@@ -24,7 +24,13 @@ import animation from 'components/General/animation.css';
 
  
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
+ 
+  constructor(props) {
+      super(props)
+      this.state ={ 
+          loginList:[]  
+      }
+  }
   static propTypes = {
     children: React.PropTypes.node,
   };
