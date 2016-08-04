@@ -14,7 +14,7 @@ function Header(props) {
 
   return (
     <header className={styles.header}>   
-      <section   onClick={function redirect() { console.log(props);   props.changeRoute('/');    }}  > 
+      <section   onClick={function redirect() {    props.changeRoute('/');    }}  > 
           <a   className={styles.headerText}       >  
               <span >  <FormattedMessage {...messages.titleMessage}  /> </span>  <br/> 
               <span  className={styles.headerSubText}>  <FormattedMessage {...messages.subtitleMessage}  /> </span>  
