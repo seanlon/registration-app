@@ -5,7 +5,20 @@
 	--color3:#fff  ;
 	--color4:#337CCC; 
 	--color5:#337CCC; 
+
+
+  --fontsize1:1rem; 
+  --fontsize2:1.2rem; 
+
+  @media(max-width: 600px){ 
+    --fontsize1:18px;  
+    --fontsize2:16px; 
+  }
+
 }
+
+
+
 .logo{
   height:auto;
   width:150px;
@@ -47,7 +60,7 @@ fieldset {
   margin-top: 0.125rem;
   margin-left: 0.125rem;
   color: var(--color1);
-  font-size: 0.8rem;
+  font-size: var(--fontsize1); 
 }
 .checkbox .form-help, .form-radio .form-help, .formgroup .form-help {
   position: absolute;
@@ -70,7 +83,7 @@ fieldset {
 }
 .formgroup select {
   width: 100%;
-  font-size: 1rem;
+  font-size: var(--fontsize1); 
   height: 1.6rem;
   padding: 0.125rem 0.125rem 0.0625rem;
   background: none;
@@ -85,7 +98,7 @@ fieldset {
   padding-left: 0.125rem;
   z-index: 1;
   color: var(--color1);
-  font-size: 1rem;
+  font-size:var(--fontsize1); 
   font-weight: normal;
   -webkit-transition: all 0.28s ease;
   transition: all 0.28s ease;
@@ -116,7 +129,7 @@ fieldset {
   background: none;
   margin:1em;
   padding: 1.125rem 0.125rem 0.0625rem;
-  font-size: 1.2rem;
+  font-size: var(--fontsize2);
   border-width: 0;
   border-color: transparent;
   line-height: 1.9;
@@ -143,7 +156,7 @@ fieldset {
 .formgroup textarea.has-value {
   color: var(--color5);
   font-weight:bolder;
-  font-size: 1.2rem;
+  font-size: var(--fontsize2);
 }
 .formgroup select ~ .controllabel,
 .formgroup input:focus ~ .controllabel,
@@ -154,7 +167,7 @@ fieldset {
 .formgroup textarea:valid ~ .controllabel,
 .formgroup textarea.form-file ~ .controllabel,
 .formgroup textarea.has-value ~ .controllabel {
-  font-size: 1.2rem;
+  font-size: var(--fontsize2);
   color: var(--color3);
   top: -1rem;
   left: 0;
@@ -202,7 +215,7 @@ fieldset {
   left: -0.25rem;
   cursor: pointer;
   display: block;
-  font-size: 1.2rem;
+  font-size: var(--fontsize2);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -300,7 +313,7 @@ fieldset {
   height: 0.5rem;
 }
 .checkbox input:checked ~ .helper::before {
-  height: 1.2rem;
+  height: var(--fontsize2);
   -webkit-transition-delay: 0.28s;
           transition-delay: 0.28s;
 }

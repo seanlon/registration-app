@@ -57,30 +57,30 @@ constructor(props) {
 
    <form onSubmit={this.submitForm}>
         <div className={materials.formgroup}>
-            <select name="purpose" onChange={this.handleChange}>
+            <select autoComplete="off"  name="purpose" onChange={this.handleChange}>
                 <option value="INTERVIEW">Interview</option>
                 <option value="VISIT">Visitation</option>
                 <option value="LOGISTIC">Deliver / Receive Item</option>
                 <option value="MAINTENANCE">Maintenance Service </option>
             </select>
             <label htmlFor={"select"} className={materials.controllabel}>
-                <FormattedMessage {...messages.purpose} />
+                <FormattedMessage {...messages.purpose} /> 
             </label><i className={materials.bar}></i>
         </div>
         <div className={materials.formgroup}>
-            <input type="text" required="required"  name="name"  onChange={this.handleChange}/>
+            <input autoComplete="off" type="text" required="required"  name="name"  onChange={this.handleChange}/>
             <label htmlFor={"input"} className={materials.controllabel} value={name}>
                 <FormattedMessage {...messages.name} />
             </label><i className={materials.bar}></i>
         </div>
         <div className={materials.formgroup}>
-            <input type="text" required="required" name="identification"  onChange={this.handleChange}/>
+            <input autoComplete="off"  type="text" required="required" name="identification"  onChange={this.handleChange}/>
             <label htmlFor={"input"} className={materials.controllabel}>
                 <FormattedMessage {...messages.userno} />
             </label><i className={materials.bar}></i>
         </div>
         <div className={materials.formgroup}>
-            <textarea required="required"  name="summary"  onChange={this.handleChange}></textarea>
+            <textarea  autoComplete="off" required="required"  name="summary"  onChange={this.handleChange}></textarea>
             <label htmlFor={"textarea"} className={materials.controllabel}>
                 <FormattedMessage {...messages.summary} />
             </label><i className={materials.bar}></i>

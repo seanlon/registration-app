@@ -83,6 +83,8 @@ export default class ManagerLog extends React.Component { // eslint-disable-line
  
 
   render() {
+
+    
       // let  lineData = [
       // {
       //   name: "series1",
@@ -96,12 +98,11 @@ export default class ManagerLog extends React.Component { // eslint-disable-line
       // ];
     return (
    <div>
-     <h3 className={materials.middle}>
-        
+     <h3 className={materials.middle}> 
+             <FormattedMessage {...messages.title} />
       </h3>
       <div className={materials.middle}> 
             <LineChart
-            legend={true}
             data={this.state.chartData}
             width={700}
             height={500}

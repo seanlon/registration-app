@@ -4,6 +4,13 @@
  * App container styles
  */
 
+.common-fullheight {
+  min-height:100%; 
+  min-height:600px; 
+  min-height:100vh; 
+ 
+  
+}
 .common-contentbox {
   width: 80%;
   margin-right: 10%;
@@ -20,40 +27,47 @@
     background-image: url('./tree.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding:50px;
-
-   
+    padding:50px;  
+    composes: common-fullheight; 
  }
 
 
+ 
 .container {
   display: block;
+  composes: common-fullheight;
   composes: common-backgroundtree;
   composes: common-colorscheme;
-  composes: common-colorscheme;
-
-
+  composes: common-colorscheme; 
 
 }
 
 .videobg{
-   height:100%;
-  -webkit-filter:blur(5px);
+  height:100%; 
   filter:blur(5px);
   position: absolute;
   top: 0;
   display:none;
 }
+
+html,body{  
+  min-height:100%; 
+  display:block;
+  /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,300);*/
+  @import url("opensans.css");
+
+
+  font-family: 'Open Sans, sans-serif';
+}
+
+
 body {
   background-color: #27ae60;
   color: #fff;
-  height:100%; 
-
-/*
-  background-image: -webkit-linear-gradient(190deg, #2376ae 0%, #6E9ECF 100%);
-  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-*/  
+ 
   background-image: -webkit-linear-gradient(190deg, #27ae60 0%, #6E9ECF 100%);
   background-image: linear-gradient(260deg, #27ae60 0%, #6E9ECF 100%);
-}
+
+ 
+} 
 

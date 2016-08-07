@@ -10,7 +10,7 @@ export default defineMessages({
  
     title: {
     id: 'app.components.manager.dashboard',
-    defaultMessage: 'Expenses[x] vs Revenues[y] for Each Visitation',
+    defaultMessage: 'Expenses[x] vs Revenues[y] for Each Visitation in USD',
   }, 
 });
  
