@@ -104,7 +104,7 @@ export default class ManagerLog extends React.Component { // eslint-disable-line
       <div className={materials.middle}> 
             <LineChart
             data={this.state.chartData}
-            width={700}
+            width={700} legend={true}
             height={500}
             title="   "
             />

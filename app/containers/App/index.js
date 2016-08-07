@@ -28,7 +28,7 @@ export default class App extends React.Component { // eslint-disable-line react/
   constructor(props) {
       super(props)
       this.state ={ 
-          loginList:[]  
+          loading:false  
       }
   }
   static propTypes = {
@@ -57,5 +57,4 @@ export default class App extends React.Component { // eslint-disable-line react/
        </div>  
     );
   }
-}// <video className={styles.videobg}   src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Coverr-Lulu.mp4" autoPlay loop></video>
-    
+} 
